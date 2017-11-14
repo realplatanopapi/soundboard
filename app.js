@@ -1,9 +1,21 @@
-const $buttonEls = document.querySelectorAll('.soundboard__btn')
+let drakeMode = false
 
-function createButton (element) {
+const $buttonEls = document.querySelectorAll('.soundboard__btn')
+const $drakeModeBtn = document.querySelector('.drake-mode-btn')
+
+function getSound (index) {
+  if (!drakeMode) {
+    return './airhorn.mp3'
+  } else if (index % 2 === 0) {
+    return './drake-ugh.mp3'
+  } else {
+    return './drake-yeauh.mp3'
+  }
+}
+
+function createButton (element, index) {
   // Create an audio element
   const audio = document.createElement('audio')
-  audio.src = './airhorn.mp3'
   let isPlaying = false
 
   function playSound () {
@@ -11,6 +23,7 @@ function createButton (element) {
       return
     }
 
+    audio.src = getSound(index)
     audio.currentTime = 0
     audio.play()
     isPlaying = true
@@ -57,4 +70,14 @@ document.body.addEventListener('keydown', event => {
       button.playSound()
     }
   })
+})
+
+$drakeModeBtn.addEventListener('click', () => {
+  drakeMode = !drakeMode
+
+  if (drakeMode) {
+    document.body.classList.add('drake-mode-active')
+  } else {
+    document.body.classList.remove('drake-mode-active')
+  }
 })

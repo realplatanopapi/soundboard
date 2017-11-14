@@ -54,7 +54,7 @@ h1 {
 
 .soundboard__btn {
   align-items: center;
-  background: #420fff;
+  background: #0CB36F;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -66,11 +66,10 @@ h1 {
 }
 
 .soundboard__btn:nth-child(2n) {
-  background: #4258FF;
+  background: #42B486;
 }
 
 .soundboard__btn.playing {
-  background: #420fff;
   opacity: 0.5;
   outline: 0;
   transform: scale(0.9);
@@ -79,4 +78,63 @@ h1 {
 .soundboard__btn--full {
   flex: 0 1 30.8rem;
   width: 30.8rem;
+}
+
+.drake-mode-btn {
+  bottom: 2rem;
+  cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  width: 4rem;
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(-30deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+.drake-mode-btn__img {
+  animation: .3s dance infinite step-end;
+  animation-fill-mode: none;
+  animation-play-state: paused;
+  display: block;
+  max-width: 100%;
+  transform: none;
+}
+
+.drake-mode-btn:hover .drake-mode-btn__img {
+  animation-play-state: running;
+}
+
+.drake-mode-btn__drake {
+  display: block;
+}
+
+.drake-mode-btn__airhorn {
+  display: none;
+}
+
+.drake-mode-active .drake-mode-btn__drake {
+  display: none;
+}
+
+.drake-mode-active .drake-mode-btn__airhorn {
+  display: block;
+}
+
+.drake-mode-active .soundboard__btn {
+  background: #F85C89;
+}
+
+.drake-mode-active .soundboard__btn:nth-child(2n) {
+  background: #F9A7BF;
 }
