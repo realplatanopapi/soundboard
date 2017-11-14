@@ -1,0 +1,80 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'system-ui', 'Helvetica', 'Arial', 'Segoe UI', sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+body {
+  align-content: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+h1, p {
+  margin-top: 0;
+}
+
+header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding: 1.5rem;
+}
+
+.soundboard {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+.soundboard__row {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.soundboard__btn {
+  cursor: pointer;
+}
+
+.soundboard__btn {
+  align-items: center;
+  background: #420fff;
+  color: #fff;
+  display: flex;
+  font-weight: 400;
+  height: 8rem;
+  justify-content: center;
+  margin: 0.1rem;
+  width: 6rem;
+}
+
+.soundboard__btn:nth-child(2n) {
+  background: #4258FF;
+}
+
+.soundboard__btn.playing {
+  background: #420fff;
+  opacity: 0.5;
+  outline: 0;
+  transform: scale(0.9);
+}
