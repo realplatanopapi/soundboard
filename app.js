@@ -4,7 +4,6 @@ function createButton (element) {
   // Create an audio element
   const audio = document.createElement('audio')
   audio.src = 'airhorn.mp3'
-
   let isPlaying = false
 
   function playSound () {
