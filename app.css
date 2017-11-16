@@ -138,3 +138,37 @@ h1 {
 .drake-mode-active .soundboard__btn:nth-child(2n) {
   background: #F9A7BF;
 }
+
+@media screen and (max-width: 1100px) {
+  .soundboard__btn {
+    height: 5rem;
+    width: 4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .soundboard__btn--full {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .soundboard__btn:nth-child(n + 8) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .soundboard__btn:nth-child(n + 6) {
+    display: none;
+  }
+
+  .drake-mode-btn {
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .soundboard__btn:nth-child(n + 5) {
+    display: none;
+  }
+}
