@@ -1,7 +1,6 @@
-let drakeMode = false
-
-const $buttonEls = document.querySelectorAll('.soundboard__btn')
+const $buttons = document.querySelectorAll('.soundboard__btn')
 const $drakeModeBtn = document.querySelector('.drake-mode-btn')
+let drakeMode = false
 
 function getSound (index) {
   if (!drakeMode) {
@@ -40,15 +39,12 @@ function createButton (element, index) {
   }
 
   // Get the key for this button
-  let key = element.dataset.key;
-  if (key) {
-    key = element.dataset.key.toLowerCase()
-  }
+  const key = element.dataset.key.toLowerCase()
 
   // Attach event listeners
   element.addEventListener('mousedown', playSound)
   element.addEventListener('keydown', (event) => {
-    const {keyCode} = event;
+    const {keyCode} = event
     if (keyCode === 32 || keyCode === 13) {
       playSound()
     }
@@ -60,16 +56,18 @@ function createButton (element, index) {
   }
 }
 
-const buttons = Array.prototype.map.call($buttonEls, createButton)
+const buttons = Array.prototype.map.call($buttons, createButton)
+const buttonsByKey = {}
+buttons.forEach(button => {
+  buttonsByKey[button.key] = button
+})
 
 document.body.addEventListener('keydown', event => {
   const {key} = event
-
-  buttons.forEach(button => {
-    if (button.key == key) {
-      button.playSound()
-    }
-  })
+  const button = buttonsByKey[key]
+  if (button) {
+    button.playSound()
+  }
 })
 
 $drakeModeBtn.addEventListener('click', () => {
