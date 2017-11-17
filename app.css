@@ -117,9 +117,9 @@ a:hover {
 .drake-mode-btn {
   bottom: 2rem;
   cursor: pointer;
+  height: 8rem;
   position: fixed;
   right: 3rem;
-  width: 4rem;
 }
 
 @keyframes dance {
@@ -137,16 +137,10 @@ a:hover {
 }
 
 .drake-mode-btn__img {
-  animation: .3s dance infinite step-end;
+  animation: .4s dance infinite step-end;
   animation-fill-mode: none;
-  animation-play-state: paused;
   display: block;
-  max-width: 100%;
-  transform: none;
-}
-
-.drake-mode-btn:hover .drake-mode-btn__img {
-  animation-play-state: running;
+  max-height: 100%;
 }
 
 .drake-mode-btn__drake {
@@ -209,7 +203,7 @@ a:hover {
   }
 
   .drake-mode-btn {
-    width: 3rem;
+    height: 6rem;
   }
 }
 
