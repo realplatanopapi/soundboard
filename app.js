@@ -35,7 +35,7 @@ function createButton (element, index) {
       if (element.classList.contains('playing')) {
         element.classList.remove('playing')
       }
-    }, 100)
+    }, 50)
   }
 
   // Get the key for this button
