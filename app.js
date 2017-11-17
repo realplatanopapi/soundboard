@@ -64,6 +64,10 @@ buttons.forEach(button => {
 })
 
 document.body.addEventListener('keydown', event => {
+  if (event.metaKey || event.ctrlKey) {
+    return;
+  }
+
   const {key} = event
   const button = buttonsByKey[key]
   if (button && window.getComputedStyle(button.element).display !== 'none') {
