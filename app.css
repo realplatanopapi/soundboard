@@ -78,6 +78,7 @@ a:hover {
   color: #fff;
   cursor: pointer;
   display: flex;
+  font-size: 1.25rem;
   font-weight: 400;
   height: 7rem;
   justify-content: center;
