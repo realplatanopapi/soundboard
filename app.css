@@ -12,6 +12,7 @@ html {
   font-family: 'Work Sans', 'system-ui', 'Helvetica', 'Arial', 'Segoe UI', sans-serif;
   font-size: 87.5%;
   line-height: 1.5;
+  touch-action: manipulation;
 }
 
 body {
