@@ -69,7 +69,7 @@ a:hover {
 
 .soundboard__btn {
   align-items: center;
-  background: #0CB36F;
+  background: #D7353E;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -81,7 +81,7 @@ a:hover {
 }
 
 .soundboard__btn:nth-child(2n) {
-  background: #42B486;
+  background: #D8767C;
 }
 
 .soundboard__btn.playing {
