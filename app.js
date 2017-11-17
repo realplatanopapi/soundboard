@@ -51,6 +51,7 @@ function createButton (element, index) {
   })
 
   return {
+    element,
     playSound,
     key
   }
@@ -65,7 +66,7 @@ buttons.forEach(button => {
 document.body.addEventListener('keydown', event => {
   const {key} = event
   const button = buttonsByKey[key]
-  if (button) {
+  if (button && window.getComputedStyle(button.element).display !== 'none') {
     button.playSound()
   }
 })
