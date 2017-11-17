@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
 html,
 body {
   margin: 0;
@@ -5,7 +7,7 @@ body {
 }
 
 html {
-  font-family: 'system-ui', 'Helvetica', 'Arial', 'Segoe UI', sans-serif;
+  font-family: 'Work Sans', 'system-ui', 'Helvetica', 'Arial', 'Segoe UI', sans-serif;
   font-size: 100%;
   line-height: 1.5;
 }
@@ -22,13 +24,15 @@ h1, p {
   margin-top: 0;
 }
 
+h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin-bottom: 0rem;
+}
+
 header {
   margin-bottom: 1.5rem;
   text-align: center;
-}
-
-h1 {
-  margin-bottom: 0rem;
 }
 
 .container {
