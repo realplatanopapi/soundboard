@@ -10,7 +10,7 @@ html {
   background: #fdfdff;
   color: #3a3a3a;
   font-family: 'Work Sans', 'system-ui', 'Helvetica', 'Arial', 'Segoe UI', sans-serif;
-  font-size: 100%;
+  font-size: 87.5%;
   line-height: 1.5;
 }
 
@@ -184,10 +184,10 @@ a:hover {
   background: #6240BC;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
   .soundboard__btn {
-    height: 5rem;
-    width: 4rem;
+    height: 5.5rem;
+    width: 4.5rem;
   }
 }
 
@@ -215,5 +215,9 @@ a:hover {
 @media screen and (max-width: 360px) {
   .soundboard__btn:nth-child(n + 5) {
     display: none;
+  }
+
+  .soundboard__btn--full {
+    max-width: calc(100% - 1.3rem);
   }
 }
