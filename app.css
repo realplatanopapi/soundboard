@@ -77,6 +77,10 @@ a:hover {
   height: 7rem;
   justify-content: center;
   margin: 0.1rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   width: 6rem;
 }
 
