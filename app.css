@@ -7,6 +7,8 @@ body {
 }
 
 html {
+  background: #fff;
+  color: #3a3a3a;
   font-family: 'Work Sans', 'system-ui', 'Helvetica', 'Arial', 'Segoe UI', sans-serif;
   font-size: 100%;
   line-height: 1.5;
@@ -25,13 +27,16 @@ h1, p {
 }
 
 h1 {
-  font-size: 2.25rem;
+  color: #1a1a1a;
+  font-size: 2rem;
   font-weight: 400;
   margin-bottom: 0rem;
 }
 
 header {
+  margin: 0 auto 3rem auto;
   margin-bottom: 3rem;
+  max-width: 40rem;
   text-align: center;
 }
 
