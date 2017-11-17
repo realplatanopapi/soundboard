@@ -35,6 +35,17 @@ header {
   text-align: center;
 }
 
+a {
+  border-bottom: 1px solid #7C51EF;
+  color: #7C51EF;
+  text-decoration: none;
+  transition: color ease-in 0.15s;
+}
+
+a:hover {
+  color: #4a4a4a;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
