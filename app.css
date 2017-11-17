@@ -84,17 +84,26 @@ a:hover {
   width: 6rem;
 }
 
-.soundboard__btn:nth-child(2n) {
-  background: #D8767C;
-}
-
 .soundboard__btn.playing {
   opacity: 0.5;
   outline: 0;
   transform: scale(0.9);
 }
 
+.soundboard__btn:nth-child(2n) {
+  background: #DA777C;
+}
+
+.soundboard__btn:nth-child(3n) {
+  background: #A4282F;
+}
+
+.soundboard__btn:nth-child(4n) {
+  background: #571619;
+}
+
 .soundboard__btn--full {
+  background: #A4282F;
   flex: 0 1 30.8rem;
   width: 30.8rem;
 }
