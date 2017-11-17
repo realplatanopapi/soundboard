@@ -2,13 +2,25 @@ const $buttons = document.querySelectorAll('.soundboard__btn')
 const $drakeModeBtn = document.querySelector('.drake-mode-btn')
 let drakeMode = false
 
+const sounds = {
+  airhorn: 'airhorn.mp3',
+  drakeUgh: 'drake-ugh.mp3',
+  drakeYeauh: 'drake-yeauh.mp3'
+}
+
+// Preload sounds
+Object.keys(sounds).forEach(soundName => {
+  const audio = document.createElement('audio')
+  audio.src = sounds[soundName]
+})
+
 function getSound (index) {
   if (!drakeMode) {
-    return './airhorn.mp3'
+    return sounds.airhorn;
   } else if (index % 2 === 0) {
-    return './drake-ugh.mp3'
+    return sounds.drakeUgh;
   } else {
-    return './drake-yeauh.mp3'
+    return sounds.drakeYeauh;
   }
 }
 
