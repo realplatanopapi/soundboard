@@ -65,7 +65,7 @@ buttons.forEach(button => {
 
 document.body.addEventListener('keydown', event => {
   if (event.metaKey || event.ctrlKey) {
-    return;
+    return
   }
 
   const {key} = event
