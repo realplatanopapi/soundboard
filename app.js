@@ -3,7 +3,7 @@ const $drakeModeBtn = document.querySelector('.drake-mode-btn')
 let drakeMode = false
 
 const sounds = {
-  airhorn: 'airhorn.mp3',
+  airhorn: 'airhorn.wav',
   drakeUgh: 'drake-ugh.mp3',
   drakeYeauh: 'drake-yeauh.mp3'
 }
