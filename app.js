@@ -30,10 +30,6 @@ function createButton (element, index) {
   let isPlaying = false
 
   function playSound () {
-    if (isPlaying) {
-      return
-    }
-
     audio.src = getSound(index)
     audio.currentTime = 0
     audio.play()
@@ -47,7 +43,7 @@ function createButton (element, index) {
       if (element.classList.contains('playing')) {
         element.classList.remove('playing')
       }
-    }, 100)
+    }, 75)
   }
 
   // Get the key for this button
