@@ -2,17 +2,17 @@ const $buttons = document.querySelectorAll('.soundboard__btn')
 const $drakeModeBtn = document.querySelector('.drake-mode-btn')
 let drakeMode = false
 
-const sounds = {
-  airhorn: 'airhorn.wav',
-  drakeUgh: 'drake-ugh.mp3',
-  drakeYeauh: 'drake-yeauh.mp3'
+function createAudioElement(src) {
+  const audio = document.createElement('audio')
+  audio.src = src
+  return audio
 }
 
-// Preload sounds
-Object.keys(sounds).forEach(soundName => {
-  const audio = document.createElement('audio')
-  audio.src = sounds[soundName]
-})
+const sounds = {
+  airhorn: createAudioElement('airhorn.wav'),
+  drakeUgh: createAudioElement('drake-ugh.mp3'),
+  drakeYeauh: createAudioElement('drake-yeauh.mp3')
+}
 
 function getSound (index) {
   if (!drakeMode) {
@@ -26,11 +26,11 @@ function getSound (index) {
 
 function createButton (element, index) {
   // Create an audio element
-  const audio = document.createElement('audio')
   let isPlaying = false
 
   function playSound () {
-    audio.src = getSound(index)
+    const audio = getSound(index)
+    audio.pause()
     audio.currentTime = 0
     audio.play()
     isPlaying = true
