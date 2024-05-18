@@ -12,8 +12,8 @@ function createAudioElement(src) {
 
 const sounds = {
   airhorn: createAudioElement("airhorn.wav"),
-  yeah1: createAudioElement("yeah1.mp3"),
-  yeah2: createAudioElement("yeah2.mp3"),
+  yeah1: createAudioElement("yeah1.wav"),
+  yeah2: createAudioElement("yeah2.wav"),
 };
 
 function getSound(index) {
