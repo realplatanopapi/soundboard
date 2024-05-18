@@ -1,5 +1,7 @@
 const $buttons = document.querySelectorAll(".soundboard__btn");
 const $conejoModeBtn = document.querySelector(".conejo-mode-btn");
+const $descriptionEn = document.querySelector(".description-en");
+const $descriptionEs = document.querySelector(".description-es");
 let conejoMode = false;
 
 function createAudioElement(src) {
@@ -87,8 +89,12 @@ $conejoModeBtn.addEventListener("click", () => {
   conejoMode = !conejoMode;
 
   if (conejoMode) {
+    $descriptionEs.classList.remove("visually-hidden");
+    $descriptionEn.classList.add("visually-hidden");
     document.body.classList.add("conejo-mode-active");
   } else {
     document.body.classList.remove("conejo-mode-active");
+    $descriptionEs.classList.add("visually-hidden");
+    $descriptionEn.classList.remove("visually-hidden");
   }
 });
