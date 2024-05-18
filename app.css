@@ -115,7 +115,7 @@ a:hover {
   width: 30.8rem;
 }
 
-.drake-mode-btn {
+.conejo-mode-btn {
   bottom: 2rem;
   cursor: pointer;
   height: 8rem;
@@ -137,46 +137,46 @@ a:hover {
   }
 }
 
-.drake-mode-btn__img {
+.conejo-mode-btn__img {
   animation: .4s dance infinite step-end;
   animation-fill-mode: none;
   display: block;
   max-height: 100%;
 }
 
-.drake-mode-btn__drake {
+.conejo-mode-btn__conejo {
   display: block;
 }
 
-.drake-mode-btn__airhorn {
+.conejo-mode-btn__airhorn {
   display: none;
 }
 
-.drake-mode-active .drake-mode-btn__drake {
+.conejo-mode-active .conejo-mode-btn__conejo {
   display: none;
 }
 
-.drake-mode-active .drake-mode-btn__airhorn {
+.conejo-mode-active .conejo-mode-btn__airhorn {
   display: block;
 }
 
-.drake-mode-active .soundboard__btn {
+.conejo-mode-active .soundboard__btn {
   background: #7C51EF;
 }
 
-.drake-mode-active .soundboard__btn:nth-child(2n) {
+.conejo-mode-active .soundboard__btn:nth-child(2n) {
   background: #B29AF2;
 }
 
-.drake-mode-active .soundboard__btn:nth-child(3n) {
+.conejo-mode-active .soundboard__btn:nth-child(3n) {
   background: #6240BC;
 }
 
-.drake-mode-active .soundboard__btn:nth-child(4n) {
+.conejo-mode-active .soundboard__btn:nth-child(4n) {
   background: #3A266F;
 }
 
-.drake-mode-active .soundboard__btn--full {
+.conejo-mode-active .soundboard__btn--full {
   background: #6240BC;
 }
 
@@ -203,7 +203,7 @@ a:hover {
     display: none;
   }
 
-  .drake-mode-btn {
+  .conejo-mode-btn {
     height: 6rem;
   }
 }
